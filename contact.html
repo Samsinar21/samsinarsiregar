@@ -5,82 +5,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Perpustakaan Sederhana Samsinar Siregar</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: ivory;
-            color: black;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-        header {
-            background-color: #71bbb2;
-            color: #f1e3d3;
-            padding: 20px;
-            text-align: center;
-            font-size: 24px;
-            font-weight: bold;
-        }
-        nav {
-            position: relative;
-            top: 20px;
-            right: 20px;
-            text-align: right;
-        }
-        nav a {
-            margin: 0 10px;
-            color: #f1e3d3;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        nav a:hover {
-            color: black;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #f1e3d3;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            text-align: left;
-            flex: 1;
-        }
-        h1, h2 {
-            color: #71bbb2;
-        }
-        form {
-            margin-top: 20px;
-        }
-        input[type="text"], input[type="email"], textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 5px 0 15px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        input[type="submit"] {
-            background-color: #71bbb2;
-            color: white;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 4px;
+ body {
+    font-family: Arial, sans-serif;
+    background-color: ivory;
+    color: black;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+header {
+    background-color: #71bbb2;
+    color: #f1e3d3;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+nav {
+    position: relative;
+    top: 20px;
+    right: 20px;
+    text-align: right;
+}
+nav a {
+    margin: 0 10px;
+    color: #f1e3d3;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+nav a:hover {
+    color: black;
+}
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f1e3d3;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    flex: 1;
+}
+h1, h2 {
+    color: #71bbb2;
+}
+form {
+    margin-top: 20px;
+}
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+input[type="submit"] {
+    background-color: #71bbb2;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: black;
+}
+footer {
+    background-color: #71bbb2;
+    color: #f1e3d3;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    margin-top: auto;
+button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 5px;
             cursor: pointer;
+            background-color: white
         }
-        input[type="submit"]:hover {
-            background-color: black;
+        button:hover {
+            background-color: #f8e19b;
         }
-        footer {
-            background-color: #71bbb2;
-            color: #f1e3d3;
-            padding: 10px;
-            text-align: center;
-            width: 100%;
-            margin-top: auto; /* Pastikan footer tetap di bawah */
-        }
+}
     </style>
 </head>
 <body>
@@ -113,7 +123,10 @@
     </div>
 
     <footer>
-        <a href="https://wa.me/6281396879561">Hubungi Kami</a>
+        <head>
+            <a href="https://wa.me/6281396879561"  target="_blank"><button onclick="ubahwarna()">Hubungi Kami </a></button>
+            <script src="script.js"></script>
+        </head>
         <br><br>
         &copy; 2025 Perpustakaan Sederhana Samsinar Siregar
     </footer>
