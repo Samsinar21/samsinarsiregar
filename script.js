@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Pesan sambutan
-    const message = "Selamat datang di Perpustakaan Sederhana Samsinar Siregar!";
+    const message = "Selamat Datang di Perpustakaan Sederhana Samsinar Siregar!";
     const words = message.split(" "); // Memisahkan pesan menjadi kata-kata
     const wordCount = words.length; // Menghitung jumlah kata
     const readingSpeed = 250; // Rata-rata kata per menit
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
     welcomeMessage.style.zIndex = "1000";
     welcomeMessage.style.boxShadow = "0 4px 20px rgba(0, 0, 0, 0.3)"; // Bayangan
     welcomeMessage.style.fontSize = "20px"; // Ukuran font lebih besar
-    welcomeMessage.style.textAlign = "center"; // Teks rata tengah
+    welcomeMessage.style.textAlign = "left"; // Teks rata tengah
     welcomeMessage.style.opacity = "1"; // Awalnya terlihat
     welcomeMessage.style.transition = "opacity 0.5s ease-in-out, transform 0.5s ease-in-out"; // Transisi untuk opacity dan transform
 
