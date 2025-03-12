@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
     welcomeMessage.style.zIndex = "1000";
     welcomeMessage.style.boxShadow = "0 4px 20px rgba(0, 0, 0, 0.3)"; // Bayangan
     welcomeMessage.style.fontSize = "20px"; // Ukuran font lebih besar
-    welcomeMessage.style.textAlign = "left"; // Teks rata tengah
+    welcomeMessage.style.textAlign = "left";
     welcomeMessage.style.opacity = "1"; // Awalnya terlihat
     welcomeMessage.style.transition = "opacity 0.5s ease-in-out, transform 0.5s ease-in-out"; // Transisi untuk opacity dan transform
 
