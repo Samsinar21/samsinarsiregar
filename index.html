@@ -5,63 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perpustakaan Sederhana Samsinar Siregar</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-    font-family: Arial, sans-serif;
-    background-color: #f1e3d3;
-    color: black;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-header {
-    background-color: #71bbb2;
-    color: #f1e3d3;
-    padding: 20px;
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-}
-nav {
-    position: relative;
-    top: 20px;
-    right: 20px;
-    text-align: right;
-}
-nav a {
-    margin: 0 10px;
-    color: #f1e3d3;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-nav a:hover {
-    color: black;
-}
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    margin: 5px;
-    cursor: pointer;
-    background-color: #461001;
-    color: beige;
-    border: none;
-    border-radius: 5px;
-}
-button:hover {
-    background-color: #f8e19b;
-}
-main {
-    padding: 50px;
-}
-footer {
-    background-color: #71bbb2;
-    color: #f1e3d3;
-    padding: 10px;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
-    </style>
 </head>
 <body>
     <header>
@@ -71,20 +14,73 @@ footer {
             <a href="about.html">About Us</a>
             <a href="contact.html">Contact Us</a>
         </nav>
-    </header> 
+    </header>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        .header {
+            background-color: #b1b0b0;
+            color: white;
+            padding: 15px 0;
+            font-size: 20px;
+            font-weight: bold;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+        }
+        .marquee {
+            display: inline-block;
+            animation: marquee 10s linear infinite;
+        }
+        @keyframes marquee {
+            from { transform: translateX(100%); }
+            to { transform: translateX(-100%); }
+        }
+        .clock {
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .content {
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            min-height: 50px;
+        }
+        .fade {
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+        }
+        .visible {
+            opacity: 1;
+        }
+    </style>
+<body>
+
+    <div class="header">
+        <span class="marquee">Selamat Datang di Website Perpustakaan Sederhana Samsinar Siregar</span>
+        <div class="clock" id="clock"></div>
+    </div>
+
+    <div class="content" id="quotes"></div>
     <main>
-        <h2>Halo! Selamat Datang di Perpustakaan Sederhana Samsinar Siregar!</h2>
-        <br>
         <p>Perpustakaan sederhana samsinar siregar adalah perpustakaan sederhana yang memiliki beberapa koleksi yaitu berupa E-Book, E-Journal, dan kumpulan tugas-tugas yang dapat diakses dengan cepat dan mudah.</p>
         <br>
-        <p><a href="https://lib.ugm.ac.id/" target="_blank" Cooperation: Perpustakaan Universitas Gadjah Mada</a></p>
+        <p><a href="https://lib.ugm.ac.id/" target="_blank" Cooperation: Perpustakaan Universitas Gadjah Mada </a></p>
     </main>
     <head>
         <button onclick="ubahwarna()">Cooperation: Perpustakaan Universitas Gadjah Mada</button>
     </head>
+
     <body>
-<script src="script.js"></script>
+        <script src="script.js"></script>
     </body>
+
     <footer>    
         &copy; 2025 Perpustakaan Sederhana Samsinar Siregar
     </footer>
