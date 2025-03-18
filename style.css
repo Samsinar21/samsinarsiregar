@@ -7,7 +7,7 @@ body {
     text-align: center;
 }
 header {
-    background-color: #71bbb2;
+    background-color: #4682b4;
     color: #f1e3d3;
     padding: 20px;
     text-align: center;
@@ -34,7 +34,7 @@ button {
     font-size: 16px;
     margin: 5px;
     cursor: pointer;
-    background-color: #461001;
+    background-color: #b1b0b0;
     color: beige;
     border: none;
     border-radius: 5px;
@@ -46,10 +46,12 @@ main {
     padding: 50px;
 }
 footer {
-    background-color: #71bbb2;
+    background-color: #4682b4;
     color: #f1e3d3;
     padding: 10px;
     position: absolute;
     bottom: 0;
     width: 100%;
 }
+
+
