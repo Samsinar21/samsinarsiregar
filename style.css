@@ -16,8 +16,8 @@ header {
 }
 nav {
     position: relative;
-    top: 50px;
-    right: 50px;
+    top: 10px;
+    right: 10px;
     text-align: right;
 }
 nav a {
