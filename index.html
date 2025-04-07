@@ -79,6 +79,73 @@
     <head>
         <button onclick="ubahwarna()">Cooperation: Perpustakaan Universitas Gadjah Mada</button>
     </head>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    input, textarea {
+      display: block;
+      margin: 10px 0;
+      width: 300px;
+      padding: 8px;
+    }
+    button {
+      padding: 8px 16px;
+    }
+    .event-card {
+      border: 1px solid #ccc;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 5px;
+    }
+    .event-card h4 {
+      margin: 0 0 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Tambah Kegiatan Organisasi</h2>
+  
+  <input type="text" id="namaKegiatan" placeholder="Nama Kegiatan">
+  <input type="date" id="tanggalKegiatan">
+  <textarea id="deskripsiKegiatan" placeholder="Deskripsi Kegiatan"></textarea>
+  <button id="tambahBtn">Tambahkan Kegiatan</button>
+
+  <h3>Daftar Kegiatan:</h3>
+  <div id="daftarKegiatan"></div>
+
+  <script>
+    const namaInput = document.getElementById('namaKegiatan');
+    const tanggalInput = document.getElementById('tanggalKegiatan');
+    const deskripsiInput = document.getElementById('deskripsiKegiatan');
+    const tambahBtn = document.getElementById('tambahBtn');
+    const daftarKegiatan = document.getElementById('daftarKegiatan');
+
+    tambahBtn.addEventListener('click', function() {
+      const nama = namaInput.value.trim();
+      const tanggal = tanggalInput.value;
+      const deskripsi = deskripsiInput.value.trim();
+
+      if (nama && tanggal && deskripsi) {
+        const card = document.createElement('div');
+        card.classList.add('event-card');
+        card.innerHTML = `
+          <h4>${nama}</h4>
+          <p><strong>Tanggal:</strong> ${tanggal}</p>
+          <p>${deskripsi}</p>
+        `;
+        daftarKegiatan.appendChild(card);
+
+        // Reset input
+        namaInput.value = '';
+        tanggalInput.value = '';
+        deskripsiInput.value = '';
+      } else {
+        alert('Semua data harus diisi!');
+      }
+    });
+  </script>
 
     <body>
         <script src="script.js"></script>
