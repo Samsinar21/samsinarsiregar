@@ -123,13 +123,24 @@
     background-color: #b1b0b0;
     color: white;
   }
+    body { font-family: Arial, sans-serif; }
+    input { margin-bottom: 10px; padding: 5px; width: 300px; }
+    ul { list-style: none; padding: 0; }
+    li { padding: 5px 0; }
     </style>
 <body>
-
     <div class="header">
         <span class="marquee">Selamat Datang di Website Perpustakaan Sederhana Samsinar Siregar</span>
         <div class="clock" id="clock"></div>
     </div>
+<h2>Mesin Pencari Kata</h2>
+<input type="text" id="searchInput" placeholder="Cari kata..." onkeyup="searchWord()">
+
+<ul id="contentList">
+  <li>Event Perpustakaan</li>
+  <li>Prestasi</li>
+  <li>kontak</li>
+</ul>
 
     <!-- Cookie Consent Pop-up -->
 <div id="cookieConsent" class="cookie-consent">
@@ -261,6 +272,17 @@
   document.getElementById('scrollDown').addEventListener('click', () => {
     window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
   });
+</script>
+<script>
+function searchWord() {
+  const input = document.getElementById("searchInput").value.toLowerCase();
+  const items = document.querySelectorAll("#contentList li");
+
+  items.forEach(item => {
+    const text = item.textContent.toLowerCase();
+    item.style.display = text.includes(input) ? "list-item" : "none";
+  });
+}
 </script>
     
 <body>
