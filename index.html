@@ -140,6 +140,118 @@
   </style>
 </head>
 <body>
+    
+<body>
+    <!-- Cookie Consent Pop-up -->
+<div id="cookieConsent" class="cookie-consent">
+  <p>Website ini menggunakan cookie untuk meningkatkan pengalaman pengguna. Pilih semua cookie atau tolak cookie kami.</p>
+  <div class="btn-group">
+    <button id="acceptCookie" class="btn btn-outline-custom">Terima Semua Cookies</button>
+    <button id="declineCookie" class="btn btn-outline-danger">Tolak</button>
+  </div>
+</div>
+    /* Styling Cookie Consent */
+  .cookie-consent {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #aebfe3;
+    color: #EEEEEE;
+    padding: 20px 25px 20px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    max-width: 480px;
+    font-size: 0.9rem;
+    z-index: 1100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* agar teks dan tombol center */
+  }
+  .cookie-consent p {
+    margin: 0 0 15px 0;
+    text-align: center; /* teks di tengah */
+  }
+  .btn-group {
+    display: flex;
+    justify-content: center; /* tombol center */
+    gap: 12px;
+    width: 100%;
+  }
+  .btn-outline-custom {
+    color: #134B70;
+    border: 2px solid #134B70;
+    padding: 6px 14px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+  }
+  .btn-outline-custom:hover {
+    background-color: #508C9B;
+    color: white;
+    border-color: #508C9B;
+  }
+  .btn-outline-danger {
+    color: #f44336;
+    border: 2px solid #f44336;
+    padding: 6px 14px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+  }
+  .btn-outline-danger:hover {
+    background-color: #f44336;
+    color: white;
+  }
+<script>
+  // Fungsi untuk set cookie
+  function setCookie(name, value, days) {
+    const d = new Date();
+    d.setTime(d.getTime() + (days*24*60*60*1000));
+    const expires = "expires="+ d.toUTCString();
+    document.cookie = name + "=" + value + ";" + expires + ";path=/";
+  }
+
+  // Fungsi untuk get cookie
+  function getCookie(name) {
+    const cname = name + "=";
+    const decodedCookie = decodeURIComponent(document.cookie);
+    const ca = decodedCookie.split(';');
+    for(let i = 0; i < ca.length; i++) {
+      let c = ca[i].trim();
+      if (c.indexOf(cname) == 0) return c.substring(cname.length, c.length);
+    }
+    return "";
+  }
+
+  // Cek cookie, jika belum ada tampilkan popup
+  window.onload = function() {
+    const consent = getCookie("cookie_consent");
+    if (consent !== "accepted" && consent !== "declined") {
+      document.getElementById("cookieConsent").style.display = "flex";
+    }
+  }
+
+  // Event klik Accept
+  document.getElementById("acceptCookie").onclick = function() {
+    setCookie("cookie_consent", "accepted", 30);
+    document.getElementById("cookieConsent").style.display = "none";
+  };
+
+  // Event klik Decline
+  document.getElementById("declineCookie").onclick = function() {
+    setCookie("cookie_consent", "declined", 30);
+    document.getElementById("cookieConsent").style.display = "none";
+  };
+</script>
+
+    
      <body>
         <script src="script.js"></script>
     </body>
